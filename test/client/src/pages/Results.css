@@ -1,0 +1,249 @@
+.results-page {
+  min-height: 100vh;
+  padding: 24px;
+  background: var(--bg);
+}
+
+.results-header {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.results-header h1 {
+  color: var(--primary);
+  font-size: 2.5rem;
+  margin: 20px 0;
+}
+
+.room-code-small {
+  color: var(--text-light);
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+.winner-section {
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.winner-card {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  text-align: center;
+  box-shadow: var(--shadow-xl);
+  border: 3px solid #f59e0b;
+}
+
+.winner-badge {
+  font-size: 5rem;
+  margin-bottom: 16px;
+}
+
+.winner-card h2 {
+  color: white;
+  margin-bottom: 12px;
+  font-size: 2rem;
+}
+
+.winner-name {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.winner-rating {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 24px;
+}
+
+.winner-drawing {
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  border: 3px solid white;
+}
+
+.top-three-section {
+  margin-bottom: 40px;
+}
+
+.top-three-section h3 {
+  text-align: center;
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 32px;
+}
+
+.top-three {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.podium-item {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--border);
+  transition: var(--transition);
+}
+
+.podium-item.first {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  border-color: #f59e0b;
+  color: white;
+}
+
+.podium-item.second {
+  background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+  border-color: #6b7280;
+  color: white;
+}
+
+.podium-item.third {
+  background: linear-gradient(135deg, #cd7f32 0%, #b45309 100%);
+  border-color: #b45309;
+  color: white;
+}
+
+.podium-badge {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.podium-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.podium-rating {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  opacity: 0.9;
+}
+
+.podium-drawing {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.rankings-section {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+
+.rankings-section h3 {
+  text-align: center;
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 32px;
+}
+
+.rankings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ranking-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--bg-card);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 2px solid var(--border);
+  transition: var(--transition);
+}
+
+.ranking-item:hover {
+  transform: translateX(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.ranking-item.top {
+  border-color: var(--primary);
+  background: rgba(99, 102, 241, 0.05);
+}
+
+.rank-position {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary);
+  min-width: 60px;
+  text-align: center;
+}
+
+.rank-info {
+  flex: 1;
+}
+
+.rank-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.rank-stats {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.rank-drawing {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--border);
+  background: white;
+}
+
+.loading-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 20px;
+}
+
+.error-container p {
+  color: var(--danger);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .results-header h1 {
+    font-size: 2rem;
+  }
+
+  .top-three {
+    grid-template-columns: 1fr;
+  }
+
+  .ranking-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .rank-drawing {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+}
